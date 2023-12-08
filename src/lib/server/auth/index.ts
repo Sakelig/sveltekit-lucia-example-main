@@ -16,7 +16,8 @@ export const auth = lucia({
 		return {
 			first_name: databaseUser.first_name,
 			last_name: databaseUser.last_name,
-			email: databaseUser.email
+			email: databaseUser.email,
+			email_verified: Boolean(databaseUser.email_verified)
 		};
 	}
 });
